@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
    {% block titulo %}
      <title>Matrices cuadradas NxN</title>
@@ -10,7 +11,8 @@
     <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
-      <img id="portada2" src="../static/images/portada.png" alt="">
+    
+<img id="portada2" src="{% static 'images/portada.png' %}" alt="My image"
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         Matrix de {{N}} x {{N}}
          <form  class="form-group mb-2" action="/" method="get">
