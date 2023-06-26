@@ -13,7 +13,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block titulo %} <title>Bejob-IBM SkillBuild</title>{% endblock%}
-     <link type="text/css" rel="stylesheet" href="{% static 'css/index.css' %}">
+<!--      <link type="text/css" rel="stylesheet" href="{% static 'css/index.css' %}"> --> 
+    <style>
+      .miflexbox{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 30vh;
+        text-align: center;
+    }
+    h1{
+      margin:0;
+      padding: 0;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: blue;
+      font-size:medium;
+    }
+    th{
+      background-color: aqua;
+      border: 2px solid blueviolet;
+      min-width: 25px;
+      max-width:70px
+    }
+    
+    td{
+      background-color: aquamarine;
+        border: 1px solid blueviolet;
+    }
+    table{
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+    #btn-submit{
+      margin-top: 2rem;
+    }
+    #btnVolver{
+      margin-left: 2rem;
+      margin-top: 0.4rem;
+    }
+    body{
+      background: url("../images/fondo.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+    #accordionExample{
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    
+    #portada1{
+            width: 12%;
+            margin: 0 auto;
+           display: block;
+    }
+    #portada2{
+            width: 18%;
+    }
+     </style>
   </head>
   <body>
       {% block mensajeH1 %}{% endblock%}
