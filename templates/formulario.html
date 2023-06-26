@@ -1,0 +1,42 @@
+
+ 
+
+{% extends 'base.html' %}
+
+
+     {% block titulo %}
+     <title>Bejob-IBM SkillBuild</title>
+    {% endblock%}
+  
+ 
+
+ {% block mensajeH1 %}
+    <h1>{{mensaje}}</h1>
+          <img id="portada1" src="../static/images/portada.png" alt="">
+
+    {% endblock%}
+    {% block main %}
+
+
+    
+      <form class="form-inline" action="/resultado/" method="get">
+        <div class="form-group mb-2">
+          
+      <!--<input type="number" id="numpy-number" name="N"  min="2" max="10"> --> 
+       <select id="numeros" class="form-select " onchange="cambiartextoh1()" name="N">
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+        </select>
+        </div>
+      <input type="submit" id="btn-submit" class="btn btn-info d-inline" value="Ver Matriz generada">
+    </form>
+
+
+  {% endblock%}

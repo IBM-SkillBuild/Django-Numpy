@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+   {% block titulo %}
+     <title>Matrices cuadradas NxN</title>
+   {% endblock%}
+
+  <br>
+  {% block mensajeH1 %}
+    <h1>Matriz generada de {{N}} x {{N}}</h1>
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <img id="portada2" src="../static/images/portada.png" alt="">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Matrix de {{N}} x {{N}}
+         <form  class="form-group mb-2" action="/" method="get">
+   <input type="submit" id="btnVolver" class="btn btn-primary" value="Ejecutar de nuevo">
+  </form>
+      
+
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table  border="1" >
+        <th>Col {{0}}</th>
+      {% for i in filas %}
+         <th id="'col'+{{i}}">Col {{i}}</th>
+       {% endfor %}
+
+      {% for fila in array %}
+      <tr>
+          {% for celda in fila %}
+            <td style="padding-left:0.8rem">{{ celda }}</td>
+            {% endfor %}
+      </tr>
+     
+      {% endfor %}
+  </table>
+
+  
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Mostrar la suma de cada fila
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+         <table  border="1" style="margin-top:0.5rem" >
+        <th style="font-size:12px">Suma de filas</th>
+               {% for fila in suma_filas %}
+        <td style="padding-left:0.4rem">{{fila}}</td>
+            {% endfor %}
+    
+  </table>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item" >
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Mostrar la suma de cada columna
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        
+          <table  border="1" style="margin-top:0.5rem">
+        <th style="font-size:12px">Suma de Columnas</th>
+               {% for col in suma_columnas %}
+        <td style="padding-left:0.4rem">{{col}}</td>
+            {% endfor %}
+    
+  </table>
+      </div>
+    </div>
+  </div>
+</div>
+    {% endblock%}
+   {% block main %}
+  
+ 
+
+
+    
+
+
+  {% endblock%}
+
+ 
+  {% block zonabotones %}
+
+
+
+{% endblock%}
+ 
