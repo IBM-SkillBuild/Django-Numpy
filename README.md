@@ -4,6 +4,10 @@
 
 [ Piche aqui para ver el proyecto en producción](https://ibm-numpy.onrender.com/ "Django-numpy by Edu 2023")
 
+Snapshop proyecto en ejecución
+
+![snapshot01](https://github.com/IBM-SkillBuild/Django-Numpy/assets/136986725/d6850c84-d213-4b73-8b66-a369c980e6cc)
+
 Audio presentación del proyecto
 
 
